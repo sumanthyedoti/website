@@ -1,0 +1,34 @@
+---
+import ExternalLinkIcon from '../icons/ExternalLinkIcon.astro'
+
+type Props = {
+  href: "string"
+}
+const {href} = Astro.props
+---
+
+<li>
+  <a class="social-link" target="_blank" href={href}>
+    <slot />
+    <span class="social-external-link" >
+      <ExternalLinkIcon width="12" height="12" />
+    </span>
+  </a>
+</li>
+
+<style>
+.social-link {
+  position: relative;
+  outline-offset: 0.4rem;
+}
+.social-external-link {
+  right: -0.8rem;
+  top: 0rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+}
+.social-link:is(:hover, :focus-visible) .social-external-link {
+  opacity: 1;
+}
+</style>

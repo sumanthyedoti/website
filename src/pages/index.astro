@@ -4,6 +4,7 @@ import GithubIcon from '../icons/GithubIcon.astro'
 import TwitterIcon from '../icons/TwitterIcon.astro'
 import LinkedinIcon from '../icons/LinkedinIcon.astro'
 import CodepenIcon from '../icons/CodepenIcon.astro'
+import SocialLink from '../components/SocialLink.astro'
 ---
 
 <BaseLayout>
@@ -15,26 +16,18 @@ import CodepenIcon from '../icons/CodepenIcon.astro'
       </main>
       <footer>
         <ul class="social-links">
-          <li>
-            <a target="_blank" href="https://github.com/sumanthyedoti">
-              <GithubIcon className="social-icon" />
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://linkedin.com/in/sumanthyedoti">
-              <LinkedinIcon className="social-icon" />
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://twitter.com/sumanthyedoti">
-              <TwitterIcon className="social-icon" />
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://codepen.io/sumanthyedoti">
-              <CodepenIcon className="social-icon" />
-            </a>
-          </li>
+          <SocialLink href="https://github.com/sumanthyedoti">
+            <GithubIcon className="social-icon" />
+          </SocialLink>
+          <SocialLink href="https://linkedin.com/in/sumanthyedoti">
+            <LinkedinIcon className="social-icon" />
+          </SocialLink>
+          <SocialLink href="https://twitter.com/sumanthyedoti">
+            <TwitterIcon className="social-icon" />
+          </SocialLink>
+          <SocialLink href="https://codepen.io/sumanthyedoti">
+            <CodepenIcon className="social-icon" />
+          </SocialLink>
         </ul>
       </footer>
     </div>
@@ -49,7 +42,7 @@ import CodepenIcon from '../icons/CodepenIcon.astro'
   background-color: var(--black);
 }
 .container {
-  width: clamp(350px, 40%, 400px);
+  min-width: 300px;
   padding: 1.6rem 2.4rem;
   border-radius: 1rem;
   background-color: #e5e5e5;
@@ -58,6 +51,7 @@ import CodepenIcon from '../icons/CodepenIcon.astro'
   margin-top: -10rem;
 
   @media (min-width: 500px) {
+    width: 440px;
     padding: 2rem 3rem;
   }
 }
