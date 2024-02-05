@@ -1,5 +1,5 @@
 export type IconProps = {
   width?: string;
-  hieght?: string;
+  height?: string;
   className?: string;
 };
