@@ -1,16 +1,87 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GithubIcon from '../icons/GithubIcon.astro'
+import TwitterIcon from '../icons/TwitterIcon.astro'
+import LinkedinIcon from '../icons/LinkedinIcon.astro'
+import CodepenIcon from '../icons/CodepenIcon.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Sumanth Yedoti</title>
-	</head>
-	<body>
-		<h1>Sumanth Yedoti</h1>
-	</body>
-</html>
+<BaseLayout>
+  <div class="main-content">
+    <div class="container">
+      <main>
+        <h1 class="title">sumanth yedoti</h1>
+        <p>Full-stack Engineer. UI/UX Enthusiast</p>
+      </main>
+      <footer>
+        <ul class="social-links">
+          <li>
+            <a target="_blank" href="https://github.com/sumanthyedoti">
+              <GithubIcon className="social-icon" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://linkedin.com/in/sumanthyedoti">
+              <LinkedinIcon className="social-icon" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/sumanthyedoti">
+              <TwitterIcon className="social-icon" />
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://codepen.io/sumanthyedoti">
+              <CodepenIcon className="social-icon" />
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.main-content {
+  display: grid;
+  height: 100dvh;
+  place-items: center;
+  background-color: var(--black);
+}
+.container {
+  width: clamp(350px, 40%, 400px);
+  padding: 1.6rem 2.4rem;
+  border-radius: 1rem;
+  background-color: #e5e5e5;
+  border: 2px solid var(--black);
+  box-shadow: 1px 2px 60px 0px #858585;
+  margin-top: -10rem;
+
+  @media (min-width: 500px) {
+    padding: 2rem 3rem;
+  }
+}
+main {
+  margin: 1rem 0;
+  text-align: center;
+}
+.title {
+  position: relative;
+  display: inline-block;
+}
+footer {
+  padding-top: 1rem;
+  border-top: 2px dashed var(--muted);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+</style>
