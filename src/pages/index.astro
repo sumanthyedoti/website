@@ -12,7 +12,7 @@ import SocialLink from '../components/SocialLink.astro'
     <div class="container">
       <main>
         <h1 class="title">sumanth yedoti</h1>
-        <p>Full-stack Engineer. UI/UX Enthusiast</p>
+        <p class="bio">Full-stack Engineer. UI/UX Enthusiast</p>
       </main>
       <footer>
         <ul class="social-links">
@@ -39,33 +39,61 @@ import SocialLink from '../components/SocialLink.astro'
   display: grid;
   height: 100dvh;
   place-items: center;
-  background-color: var(--black);
+  background-color: var(--bg);
 }
 .container {
-  min-width: 300px;
-  padding: 1.6rem 2.4rem;
   border-radius: 1rem;
+  margin: 0 0.5rem;
   background-color: #e5e5e5;
   border: 2px solid var(--black);
-  box-shadow: 1px 2px 60px 0px #858585;
+  box-shadow: 0px 0px 50px 0px #858585;
   margin-top: -10rem;
-
-  @media (min-width: 500px) {
-    width: 440px;
-    padding: 2rem 3rem;
-  }
 }
 main {
-  margin: 1rem 0;
+  padding: 1.6em 2em 1.6em;
   text-align: center;
+  @media (min-width: 580px) {
+    padding: 2em 4em 2.4em;
+  }
 }
+
 .title {
   position: relative;
   display: inline-block;
 }
+.bio {
+  font-weight: 400;
+  font-size: 1rem;
+  @media (min-width: 580px) {
+    font-size: 1.1rem;
+  }
+}
 footer {
-  padding-top: 1rem;
+  padding: 1.6rem 2.4rem;
+  position: relative;
   border-top: 2px dashed var(--muted);
+  @media (min-width: 500px) {
+    padding: 2rem 4rem;
+  }
+
+  &::before, &::after {
+    --size: 0.6rem;
+    content: "";
+    position: absolute;
+    top: calc(var(--size) / -2);
+    border-radius: var(--size);
+    width: var(--size);
+    height: var(--size);
+    background-color: #454545;
+  }
+  &::before {
+    left: calc(var(--size) / -2);
+    border-right: 2px solid var(--black);
+  }
+  &::after {
+    right: calc(var(--size) / -2);
+    border-left: 2px solid var(--black);
+  }
 }
 
 .social-links {

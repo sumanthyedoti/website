@@ -386,6 +386,8 @@ Make elements with the HTML hidden attribute stay hidden by default.
     --muted: rgb(161, 161, 170);
     --gray: #6b7280;
     --black: #252525;
+    --primary-foreground: #0f0f0f;
+    --bg: #11111f;
     --white: #f5f5f5;
     /* breakpoints */
     --screen-xs: 420px;
@@ -398,6 +400,9 @@ Make elements with the HTML hidden attribute stay hidden by default.
   }
 }
 
+body {
+  color: var(--primary-foreground);
+}
 h1 {
   font-size: 2rem;
   font-weight: 800;
