@@ -2,13 +2,14 @@
 import ExternalLinkIcon from '../icons/ExternalLinkIcon.astro'
 
 type Props = {
+  title: string
   href: string
 }
-const {href} = Astro.props
+const {href, title} = Astro.props
 ---
 
 <li>
-  <a class="social-link" target="_blank" href={href}>
+  <a class="social-link" target="_blank" href={href} aria-label={title} title={title}>
     <slot />
     <span class="social-external-link" >
       <ExternalLinkIcon width="12" height="12" />

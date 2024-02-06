@@ -16,16 +16,16 @@ import SocialLink from '../components/SocialLink.astro'
       </main>
       <footer>
         <ul class="social-links">
-          <SocialLink href="https://github.com/sumanthyedoti">
+          <SocialLink title="Github" href="https://github.com/sumanthyedoti">
             <GithubIcon className="social-icon" />
           </SocialLink>
-          <SocialLink href="https://linkedin.com/in/sumanthyedoti">
+          <SocialLink title="Linkedin" href="https://linkedin.com/in/sumanthyedoti">
             <LinkedinIcon className="social-icon" />
           </SocialLink>
-          <SocialLink href="https://twitter.com/sumanthyedoti">
+          <SocialLink title="Twiiter" href="https://twitter.com/sumanthyedoti">
             <TwitterIcon className="social-icon" />
           </SocialLink>
-          <SocialLink href="https://codepen.io/sumanthyedoti">
+          <SocialLink title="codepen" href="https://codepen.io/sumanthyedoti">
             <CodepenIcon className="social-icon" />
           </SocialLink>
         </ul>
@@ -80,7 +80,7 @@ footer {
     --size: 0.6rem;
     content: "";
     position: absolute;
-    top: calc(var(--size) / -2);
+    top: calc(var(--size) / -1.8);
     border-radius: var(--size);
     width: var(--size);
     height: var(--size);
